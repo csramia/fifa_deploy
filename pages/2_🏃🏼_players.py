@@ -5,7 +5,7 @@ st.set_page_config(
     page_icon="🏃🏼",
     layout="wide"
 )
-if st.session_state["data"] is None:
+if "data" not in st.session_state:
     st.switch_page("1_🏠_home.py")
 
 df_data = st.session_state["data"]
